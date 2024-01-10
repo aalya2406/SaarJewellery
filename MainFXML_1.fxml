@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" stylesheets="@../styles/styles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainWindow.MainFXMLController">
+   <children>
+      <ImageView fitHeight="92.0" fitWidth="141.0" layoutX="234.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/saar.jpg" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="btnProduct" layoutX="10.0" layoutY="180.0" onAction="#product" prefHeight="111.0" prefWidth="137.0" text="PRODUCTS" />
+      <JFXButton fx:id="btnClient" layoutX="158.0" layoutY="180.0" onAction="#client" prefHeight="111.0" prefWidth="137.0" text="CLIENTS" />
+      <JFXButton fx:id="btnEmployees" disable="true" layoutX="305.0" layoutY="180.0" onAction="#employee" prefHeight="111.0" prefWidth="137.0" text="EMPLOYEES" />
+      <JFXButton fx:id="btnInvoices" layoutX="453.0" layoutY="180.0" onAction="#invoice" prefHeight="111.0" prefWidth="137.0" text="INVOICES" />
+      <JFXButton fx:id="btnBack" layoutX="483.0" layoutY="344.0" onAction="#back" prefHeight="42.0" prefWidth="107.0" text="BACK" />
+   </children>
+</AnchorPane>

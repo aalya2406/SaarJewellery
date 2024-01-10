@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="800.0" style="-fx-background-radius: 2; -fx-border-radius: 2;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="products.ProductFXMLController">
+   <children>
+      <AnchorPane layoutX="257.0" prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: fff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane fx:id="pniEdit" layoutY="-1.0" prefHeight="510.0" prefWidth="800.0" style="-fx-background-color: #E3E7F1;" stylesheets="@../styles/styles.css" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-1.0">
+               <children>
+                  <JFXButton fx:id="btnEditInEdit" layoutX="649.0" layoutY="414.0" onAction="#updateProduct" prefHeight="39.0" prefWidth="113.0" text="EDIT" />
+                  <JFXButton fx:id="btnViewE" layoutX="310.0" layoutY="414.0" onAction="#viewProductInUpdate" prefHeight="39.0" prefWidth="121.0" text="VIEW ALL" />
+                  <JFXButton fx:id="btnSelectE" layoutX="478.0" layoutY="415.0" onAction="#selectInUpdate" prefHeight="39.0" prefWidth="121.0" text="SELECT" />
+                  <JFXTextField fx:id="txtQuantityU" labelFloat="true" layoutX="624.0" layoutY="251.0" promptText="Enter Quantity" />
+                  <JFXTextField fx:id="txtDescriptionU" labelFloat="true" layoutX="265.0" layoutY="335.0" prefHeight="31.0" prefWidth="149.0" promptText="Enter Description" />
+                  <JFXTextField fx:id="txtCostU" labelFloat="true" layoutX="431.0" layoutY="335.0" promptText="Enter Cost" />
+                  <JFXTextField fx:id="txtDiscountU" labelFloat="true" layoutX="621.0" layoutY="335.0" promptText="Enter Discount" />
+                  <JFXTextField fx:id="txtFirstNameU" labelFloat="true" promptText="First Name" />
+                  <JFXTextField fx:id="txtFirstNameU1" labelFloat="true" promptText="First Name" />
+                  <JFXTextField fx:id="txtSizeU" labelFloat="true" layoutX="435.0" layoutY="251.0" promptText="Enter Size" />
+                  <TableView fx:id="productTableU" layoutX="265.0" layoutY="14.0" prefHeight="200.0" prefWidth="529.0">
+                     <columns>
+                        <TableColumn fx:id="prodTypeU" prefWidth="75.0" text="Type" />
+                        <TableColumn fx:id="prodSizeU" prefWidth="75.0" text="Size" />
+                        <TableColumn fx:id="prodQuantityU" prefWidth="86.0" text="Quantity" />
+                        <TableColumn fx:id="prodDescriptionU" prefWidth="106.0" text="Description" />
+                        <TableColumn fx:id="prodCostU" prefWidth="93.0" text="Cost" />
+                        <TableColumn fx:id="prodDiscountU" prefWidth="89.0" text="Discount" />
+                     </columns>
+                  </TableView>
+                  <JFXComboBox fx:id="cbTypeU" labelFloat="true" layoutX="274.0" layoutY="251.0" prefHeight="31.0" prefWidth="141.0" promptText="Select Type" />
+               </children>
+            </Pane>
+            <Pane fx:id="pniSearch" layoutY="1.0" prefHeight="500.0" prefWidth="450.0" style="-fx-background-color: #AECDCB;" stylesheets="@../styles/styles.css" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <JFXButton fx:id="btnSearchInS" layoutX="536.0" layoutY="422.0" onAction="#searchProduct" prefHeight="39.0" prefWidth="113.0" text="SEARCH" />
+                  <JFXTextField fx:id="txtNameS" labelFloat="true" layoutX="296.0" layoutY="429.0" prefHeight="25.0" prefWidth="217.0" promptText="Enter Product Type" />
+                  <TableView fx:id="productTableS" layoutX="263.0" layoutY="115.0" prefHeight="200.0" prefWidth="529.0">
+                     <columns>
+                        <TableColumn fx:id="prodTypeS" prefWidth="75.0" text="Type" />
+                        <TableColumn fx:id="prodSizeS" prefWidth="75.0" text="Size" />
+                        <TableColumn fx:id="prodQuantityS" prefWidth="86.0" text="Quantity" />
+                        <TableColumn fx:id="prodDescriptionS" prefWidth="106.0" text="Description" />
+                        <TableColumn fx:id="prodCostS" prefWidth="93.0" text="Cost" />
+                        <TableColumn fx:id="prodDiscountS" prefWidth="91.0" text="Discount" />
+                     </columns>
+                  </TableView>
+               </children>
+            </Pane>
+            <Pane fx:id="pniDelete" layoutX="1.0" prefHeight="500.0" prefWidth="450.0" style="-fx-background-color: #DFE8E6;" stylesheets="@../styles/styles.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <JFXButton fx:id="btnDeleteInD" layoutX="609.0" layoutY="406.0" onAction="#deleteProduct" prefHeight="39.0" prefWidth="113.0" text="DELETE" />
+                  <JFXButton fx:id="btnViewD" layoutX="435.0" layoutY="408.0" onAction="#viewProductInDelete" prefHeight="39.0" prefWidth="113.0" text="VIEW" />
+                  <TableView fx:id="productTableD" layoutX="266.0" layoutY="102.0" prefHeight="200.0" prefWidth="529.0">
+                     <columns>
+                        <TableColumn fx:id="prodTypeD" prefWidth="75.0" text="Type" />
+                        <TableColumn fx:id="prodSizeD" prefWidth="75.0" text="Size" />
+                        <TableColumn fx:id="prodQuantityD" prefWidth="86.0" text="Quantity" />
+                        <TableColumn fx:id="prodDescriptionD" prefWidth="106.0" text="Description" />
+                        <TableColumn fx:id="prodCostD" prefWidth="93.0" text="Cost" />
+                        <TableColumn fx:id="prodDiscountD" prefWidth="90.0" text="Discount" />
+                     </columns>
+                  </TableView>
+               </children>
+            </Pane>
+            <Pane fx:id="pniAdd" prefHeight="500.0" prefWidth="450.0" style="-fx-background-color: #BDC6D9;" stylesheets="@../styles/styles.css" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <JFXTextField fx:id="txtSize" labelFloat="true" layoutX="400.0" layoutY="101.0" prefHeight="25.0" prefWidth="257.0" promptText="Enter Size" />
+                  <JFXTextField fx:id="txtQuantity" labelFloat="true" layoutX="400.0" layoutY="166.0" prefHeight="25.0" prefWidth="257.0" promptText="Enter Quantity" />
+                  <JFXTextField fx:id="txtDescription" labelFloat="true" layoutX="400.0" layoutY="224.0" prefHeight="25.0" prefWidth="257.0" promptText="Enter Description" />
+                  <JFXTextField fx:id="txtCost" labelFloat="true" layoutX="400.0" layoutY="285.0" prefHeight="25.0" prefWidth="257.0" promptText="Enter Cost" />
+                  <JFXButton fx:id="btnAddInSave" buttonType="RAISED" layoutX="399.0" layoutY="438.0" onAction="#addProduct" prefHeight="39.0" prefWidth="106.0" text="ADD" />
+                  <JFXButton fx:id="btnClear" buttonType="RAISED" layoutX="553.0" layoutY="436.0" onAction="#clearAll" prefHeight="39.0" prefWidth="106.0" text="CLEAR" />
+                  <JFXTextField fx:id="txtDiscount" labelFloat="true" layoutX="400.0" layoutY="351.0" prefHeight="31.0" prefWidth="121.0" promptText="Enter Discount" />
+                  <JFXComboBox fx:id="cbType" labelFloat="true" layoutX="400.0" layoutY="48.0" prefHeight="31.0" prefWidth="257.0" promptText="Select Type" />
+                  <Hyperlink fx:id="hlinkGold" layoutX="553.0" layoutY="352.0" onAction="#openURL" prefHeight="29.0" prefWidth="168.0" text="gold-rate.co.in" />
+               </children>
+            </Pane>
+            <Pane fx:id="pniView" layoutX="-1.0" prefHeight="500.0" prefWidth="450.0" style="-fx-background-color: #35CCBE;" stylesheets="@../styles/styles.css" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <JFXButton fx:id="btnViewInView" buttonType="RAISED" layoutX="489.0" layoutY="423.0" onAction="#viewProduct" prefHeight="39.0" prefWidth="113.0" text="VIEW" />
+                  <TableView fx:id="productTable" layoutX="262.0" layoutY="127.0" prefHeight="200.0" prefWidth="529.0">
+                     <columns>
+                        <TableColumn fx:id="prodType" prefWidth="75.0" text="Type" />
+                        <TableColumn fx:id="prodSize" prefWidth="75.0" text="Size" />
+                        <TableColumn fx:id="prodQuantity" prefWidth="86.0" text="Quantity" />
+                        <TableColumn fx:id="prodDescription" prefWidth="106.0" text="Description" />
+                        <TableColumn fx:id="prodCost" prefWidth="93.0" text="Cost" />
+                        <TableColumn fx:id="prodDiscount" prefWidth="75.0" text="Discount" />
+                     </columns>
+                  </TableView>
+                  <JFXButton fx:id="btnChartInView" layoutX="644.0" layoutY="423.0" onAction="#productChart" prefHeight="39.0" prefWidth="113.0" text="GRAPH" />
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="1.0" layoutY="-1.0" prefHeight="500.0" prefWidth="250.0" style="-fx-background-color: #F0F7FF;">
+         <children>
+            <AnchorPane layoutX="1.0" layoutY="4.0" prefHeight="500.0" prefWidth="62.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 2;" />
+            <ImageView fitHeight="55.0" fitWidth="192.0" layoutX="117.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/saar.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="81.0" fitWidth="106.0" layoutX="111.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/product.jpg" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="btnSave" alignment="BASELINE_LEFT" graphicTextGap="50.0" layoutX="1.0" layoutY="134.0" onAction="#handleButtonAction" prefHeight="55.0" prefWidth="256.0" ripplerFill="#2b7cd3" text="ADD PRODUCT">
+               <graphic>
+                  <MaterialDesignIconView glyphName="APPLE" size="25" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnSearch" alignment="BASELINE_LEFT" graphicTextGap="50.0" layoutX="-1.0" layoutY="254.0" onAction="#handleButtonAction" prefHeight="55.0" prefWidth="256.0" ripplerFill="#2b7cd3" text="SEARCH PRODUCT">
+               <graphic>
+                  <FontAwesomeIconView glyphName="NEUTER" size="25" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnDelete" alignment="BASELINE_LEFT" graphicTextGap="50.0" layoutY="317.0" onAction="#handleButtonAction" prefHeight="55.0" prefWidth="256.0" ripplerFill="#2b7cd3" text="DELETE PRODUCT">
+               <graphic>
+                  <FontAwesomeIconView glyphName="RECYCLE" size="25" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnEdit" alignment="BASELINE_LEFT" graphicTextGap="50.0" layoutY="380.0" onAction="#handleButtonAction" prefHeight="55.0" prefWidth="256.0" ripplerFill="#2b7cd3" text="EDIT PRODUCT">
+               <graphic>
+                  <FontAwesomeIconView glyphName="EDIT" size="25" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnHome" alignment="BASELINE_LEFT" graphicTextGap="50.0" layoutY="442.0" onAction="#handleButtonAction" prefHeight="55.0" prefWidth="256.0" ripplerFill="#2b7cd3" text="HOME">
+               <graphic>
+                  <FontAwesomeIconView glyphName="HOME" size="25" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnView" alignment="BASELINE_LEFT" graphicTextGap="50.0" layoutX="1.0" layoutY="195.0" onAction="#handleButtonAction" prefHeight="55.0" prefWidth="256.0" ripplerFill="#2b7cd3" text="VIEW PRODUCTS">
+               <graphic>
+                  <FontAwesomeIconView glyphName="EYE" size="25" />
+               </graphic>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
