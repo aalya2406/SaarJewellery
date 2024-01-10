@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="800.0" style="-fx-background-radius: 2; -fx-border-radius: 2;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="employees.EmployeeFXMLController">
+   <children>
+      <AnchorPane layoutX="257.0" prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: fff;" stylesheets="@../styling/styles2.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane fx:id="pniAdd" prefHeight="500.0" prefWidth="450.0" style="-fx-background-color: #BDC6D9;" stylesheets="@../styles/styles.css" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <JFXTextField fx:id="txtFirstName" labelFloat="true" layoutX="400.0" layoutY="31.0" prefHeight="25.0" prefWidth="257.0" promptText="First Name" />
+                  <JFXTextField fx:id="txtLastName" labelFloat="true" layoutX="400.0" layoutY="86.0" prefHeight="25.0" prefWidth="257.0" promptText="Last Name" />
+                  <JFXTextField fx:id="txtSalary" labelFloat="true" layoutX="399.0" layoutY="150.0" prefHeight="25.0" prefWidth="257.0" promptText="Salary" />
+                  <JFXTextField fx:id="txtPhone" labelFloat="true" layoutX="399.0" layoutY="209.0" prefHeight="25.0" prefWidth="257.0" promptText="Phone" />
+                  <JFXTextField fx:id="txtAttendance" labelFloat="true" layoutX="400.0" layoutY="267.0" prefHeight="25.0" prefWidth="257.0" promptText="Attendance" />
+                  <JFXTextField fx:id="txtDesignation" labelFloat="true" layoutX="400.0" layoutY="325.0" prefHeight="25.0" prefWidth="257.0" promptText="Designation" />
+                  <JFXButton fx:id="btnAddInSave" buttonType="RAISED" layoutX="399.0" layoutY="438.0" onAction="#addEmployee" prefHeight="39.0" prefWidth="106.0" text="ADD" />
+                  <JFXButton fx:id="btnClear" buttonType="RAISED" layoutX="553.0" layoutY="436.0" onAction="#clearAll" prefHeight="39.0" prefWidth="106.0" text="CLEAR" />
+                  <JFXTextField fx:id="txtGender" labelFloat="true" layoutX="400.0" layoutY="380.0" prefHeight="25.0" prefWidth="257.0" promptText="Gender" />
+               </children>
+            </Pane>
+            <Pane fx:id="pniEdit" layoutY="-1.0" prefHeight="510.0" prefWidth="800.0" style="-fx-background-color: #E3E7F1;" stylesheets="@../styles/styles.css" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-1.0">
+               <children>
+                  <JFXButton fx:id="btnEditInEdit" layoutX="649.0" layoutY="414.0" onAction="#updateEmployee" prefHeight="39.0" prefWidth="113.0" text="EDIT" />
+                  <JFXButton fx:id="btnViewE" layoutX="310.0" layoutY="414.0" onAction="#viewEmployeeInUpdate" prefHeight="39.0" prefWidth="121.0" text="VIEW ALL" />
+                  <JFXButton fx:id="btnSelectE" layoutX="478.0" layoutY="415.0" onAction="#selectInUpdate" prefHeight="39.0" prefWidth="121.0" text="SELECT" />
+                  <TableView fx:id="empTableU" layoutX="267.0" layoutY="20.0" prefHeight="200.0" prefWidth="529.0">
+                     <columns>
+                        <TableColumn fx:id="firstNameU" prefWidth="75.0" text="FirstName" />
+                        <TableColumn fx:id="lastNameU" prefWidth="75.0" text="LastName" />
+                        <TableColumn fx:id="salaryU" prefWidth="75.0" text="Salary" />
+                        <TableColumn fx:id="phoneU" prefWidth="75.0" text="Phone" />
+                        <TableColumn fx:id="attendanceU" prefWidth="75.0" text="Attendance" />
+                        <TableColumn fx:id="designationU" prefWidth="75.0" text="Designation" />
+                        <TableColumn fx:id="genderU" prefWidth="75.0" text="Gender" />
+                     </columns>
+                  </TableView>
+                  <JFXTextField fx:id="txtLastNameU" labelFloat="true" layoutX="462.0" layoutY="251.0" promptText="Last Name" />
+                  <JFXTextField fx:id="txtSalaryU" labelFloat="true" layoutX="648.0" layoutY="251.0" prefHeight="31.0" prefWidth="149.0" promptText="Salary" />
+                  <JFXTextField fx:id="txtPhoneU" labelFloat="true" layoutX="277.0" layoutY="312.0" promptText="Phone" />
+                  <JFXTextField fx:id="txtAttendanceU" labelFloat="true" layoutX="462.0" layoutY="312.0" promptText="Attendance" />
+                  <JFXTextField fx:id="txtDesignationU" labelFloat="true" layoutX="648.0" layoutY="312.0" prefHeight="31.0" prefWidth="149.0" promptText="Designation" />
+                  <JFXTextField fx:id="txtGenderU" labelFloat="true" layoutX="464.0" layoutY="365.0" promptText="Gender" />
+                  <JFXTextField fx:id="txtFirstNameU" labelFloat="true" promptText="First Name" />
+                  <JFXTextField fx:id="txtFirstNameU1" labelFloat="true" promptText="First Name" />
+                  <JFXTextField fx:id="txtFirstNameU2" labelFloat="true" layoutX="276.0" layoutY="253.0" promptText="First Name" />
+               </children>
+            </Pane>
+            <Pane fx:id="pniDelete" layoutX="1.0" prefHeight="500.0" prefWidth="450.0" style="-fx-background-color: #DFE8E6;" stylesheets="@../styles/styles.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <JFXButton fx:id="btnDeleteInD" layoutX="609.0" layoutY="406.0" onAction="#deleteEmployee" prefHeight="39.0" prefWidth="113.0" text="DELETE" />
+                  <JFXButton fx:id="btnViewD" layoutX="435.0" layoutY="408.0" onAction="#viewEmployeeInDelete" prefHeight="39.0" prefWidth="113.0" text="VIEW" />
+                  <TableView fx:id="empTableD" layoutX="265.0" layoutY="127.0" prefHeight="200.0" prefWidth="529.0">
+                     <columns>
+                        <TableColumn fx:id="firstNameD" prefWidth="75.0" text="FirstName" />
+                        <TableColumn fx:id="lastNameD" prefWidth="75.0" text="LastName" />
+                        <TableColumn fx:id="salaryD" prefWidth="75.0" text="Salary" />
+                        <TableColumn fx:id="phoneD" prefWidth="75.0" text="Phone" />
+                        <TableColumn fx:id="attendanceD" prefWidth="75.0" text="Attendance" />
+                        <TableColumn fx:id="designationD" prefWidth="75.0" text="Designation" />
+                        <TableColumn fx:id="genderD" prefWidth="75.0" text="Gender" />
+                     </columns>
+                  </TableView>
+               </children>
+            </Pane>
+            <Pane fx:id="pniSearch" layoutY="1.0" prefHeight="500.0" prefWidth="450.0" style="-fx-background-color: #AECDCB;" stylesheets="@../styles/styles.css" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <JFXButton fx:id="btnSearchInS" layoutX="536.0" layoutY="422.0" onAction="#searchEmployee" prefHeight="39.0" prefWidth="113.0" text="SEARCH" />
+                  <JFXTextField fx:id="txtNameS" labelFloat="true" layoutX="296.0" layoutY="429.0" prefHeight="25.0" prefWidth="217.0" promptText="Enter First Name" />
+                  <TableView fx:id="empTableS" layoutX="265.0" layoutY="113.0" prefHeight="200.0" prefWidth="529.0">
+                     <columns>
+                        <TableColumn fx:id="firstNameS" prefWidth="75.0" text="FirstName" />
+                        <TableColumn fx:id="lastNameS" prefWidth="75.0" text="LastName" />
+                        <TableColumn fx:id="salaryS" prefWidth="75.0" text="Salary" />
+                        <TableColumn fx:id="phoneS" prefWidth="75.0" text="Phone" />
+                        <TableColumn fx:id="attendanceS" prefWidth="75.0" text="Attendance" />
+                        <TableColumn fx:id="designationS" prefWidth="75.0" text="Designation" />
+                        <TableColumn fx:id="genderS" prefWidth="75.0" text="Gender" />
+                     </columns>
+                  </TableView>
+               </children>
+            </Pane>
+            <Pane fx:id="pniView" layoutX="-1.0" prefHeight="500.0" prefWidth="450.0" style="-fx-background-color: #35CCBE;" stylesheets="@../styles/styles.css" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <JFXButton fx:id="btnViewInView" buttonType="RAISED" layoutX="489.0" layoutY="423.0" onAction="#viewEmployee" prefHeight="39.0" prefWidth="113.0" text="VIEW" />
+                  <TableView fx:id="empTable" layoutX="262.0" layoutY="127.0" prefHeight="200.0" prefWidth="529.0">
+                     <columns>
+                        <TableColumn fx:id="firstName" prefWidth="75.0" text="FirstName" />
+                        <TableColumn fx:id="lastName" prefWidth="75.0" text="LastName" />
+                        <TableColumn fx:id="salary" prefWidth="75.0" text="Salary" />
+                        <TableColumn fx:id="phone" prefWidth="75.0" text="Phone" />
+                        <TableColumn fx:id="attendance" prefWidth="75.0" text="Attendance" />
+                        <TableColumn fx:id="designation" prefWidth="75.0" text="Designation" />
+                        <TableColumn fx:id="gender" prefWidth="75.0" text="Gender" />
+                     </columns>
+                  </TableView>
+                  <JFXButton fx:id="btnChartInView" layoutX="644.0" layoutY="423.0" onAction="#exportToExcel" prefHeight="39.0" prefWidth="113.0" text="EXPORT" />
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="1.0" layoutY="-1.0" prefHeight="500.0" prefWidth="250.0" style="-fx-background-color: #F0F7FF;">
+         <children>
+            <AnchorPane layoutX="1.0" layoutY="4.0" prefHeight="500.0" prefWidth="62.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 2;" />
+            <ImageView fitHeight="55.0" fitWidth="192.0" layoutX="117.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/saar.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="80.0" fitWidth="149.0" layoutX="79.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/employees.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="btnSave" alignment="BASELINE_LEFT" graphicTextGap="50.0" layoutX="1.0" layoutY="134.0" onAction="#handleButtonAction" prefHeight="55.0" prefWidth="256.0" ripplerFill="#2b7cd3" text="ADD EMPLOYEE">
+               <graphic>
+                  <MaterialDesignIconView glyphName="APPLE" size="25" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnSearch" alignment="BASELINE_LEFT" graphicTextGap="50.0" layoutX="-1.0" layoutY="254.0" onAction="#handleButtonAction" prefHeight="55.0" prefWidth="256.0" ripplerFill="#2b7cd3" text="SEARCH EMPLOYEE">
+               <graphic>
+                  <FontAwesomeIconView glyphName="NEUTER" size="25" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnDelete" alignment="BASELINE_LEFT" graphicTextGap="50.0" layoutY="317.0" onAction="#handleButtonAction" prefHeight="55.0" prefWidth="256.0" ripplerFill="#2b7cd3" text="DELETE EMPLOYEE">
+               <graphic>
+                  <FontAwesomeIconView glyphName="RECYCLE" size="25" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnEdit" alignment="BASELINE_LEFT" graphicTextGap="50.0" layoutY="380.0" onAction="#handleButtonAction" prefHeight="55.0" prefWidth="256.0" ripplerFill="#2b7cd3" text="EDIT EMPLOYEE">
+               <graphic>
+                  <FontAwesomeIconView glyphName="EDIT" size="25" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnHome" alignment="BASELINE_LEFT" graphicTextGap="50.0" layoutY="442.0" onAction="#handleButtonAction" prefHeight="55.0" prefWidth="256.0" ripplerFill="#2b7cd3" text="HOME">
+               <graphic>
+                  <FontAwesomeIconView glyphName="HOME" size="25" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnView" alignment="BASELINE_LEFT" graphicTextGap="50.0" layoutX="1.0" layoutY="195.0" onAction="#handleButtonAction" prefHeight="55.0" prefWidth="256.0" ripplerFill="#2b7cd3" text="VIEW EMPLOYEE">
+               <graphic>
+                  <FontAwesomeIconView glyphName="EYE" size="25" />
+               </graphic>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
